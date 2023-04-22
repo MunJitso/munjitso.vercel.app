@@ -1,0 +1,96 @@
+@import 'tailwindcss/base';
+@import 'tailwindcss/components';
+@import 'tailwindcss/utilities';
+@import url('https://fonts.googleapis.com/css2?family=Rubik&display=swap');
+
+
+* {
+    scroll-behavior: smooth;
+    box-sizing: inherit;
+    font-family: 'Poppins', sans-serif;
+}
+body{
+    color: white;
+    background-image: url("wallpaper.jpg");
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+    background-attachment: fixed;
+}
+h1{
+    font-family: 'Space Grotesk', sans-serif;
+    font-size: 1.7rem;
+}
+.nav-place{
+    height: 3.3rem;
+}
+nav{
+    z-index: 1000;
+    width: calc((100% - 0px) - 0px);
+    position: fixed;
+    background-color: #262626;
+    filter: drop-shadow(0px 5px 17px #00000053);
+}
+nav div{
+    justify-content: space-between;
+    padding: 0.6rem 3rem;
+}
+.phone-nav{
+    filter: drop-shadow(0px -5px 17px #000);
+    display: none;
+    left: 0;
+    bottom: 0;
+}
+.m-container{
+    padding: 2rem 2rem;
+    margin: 1rem 0;
+    min-width: 50%;
+    max-width: 35rem;
+    background-color: #211A17;
+}
+.pfp{
+    width: 6rem;
+    border-radius: 1rem;
+}
+.button{
+    padding: 0.5rem 1rem;
+    background-color: rgb(88, 131, 88);
+    transition: 0.06s;
+}
+.button:hover{
+    background-color: rgb(58, 86, 58);
+}
+.dom-container{
+    display: flex;
+    align-self: center;
+    justify-content: center;
+}
+.links a{
+    padding: 0.5rem 2rem;
+    margin-left: 0.5rem;
+    border-radius: 3px;
+    transition: 0.08s;
+    font-family: 'Rubik', sans-serif;
+}
+.links a:hover{
+    background-color: #ffffff37;
+}
+.social-icon{
+    border-radius: 7px;
+    font-size: 1.4rem;
+    padding: 0.5rem 1rem;
+    background-color: rgb(88, 131, 88);
+    text-align: center;
+}
+@media (max-width:991px) {
+    .toggle{
+        display: none;
+    }
+    .phone-nav{
+        display: flex; 
+        justify-content: center;
+    }
+    nav div{
+        justify-content: center;
+    }
+}
