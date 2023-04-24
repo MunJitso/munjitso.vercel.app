@@ -25,7 +25,8 @@ export class ReposComponent {
     "CSS" : faCss3,
     "Python" : faPython,
     "Rust" : faRust,
-    "JavaScript" : faJs
+    "JavaScript" : faJs,
+    "TypeScript" : faJs
   }
   
   constructor(private apiService: ApiService, public router : Router){}
