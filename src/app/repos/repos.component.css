@@ -1,0 +1,12 @@
+.r-container{
+    padding:2rem 0;
+    width: 90%;
+}
+.repo{
+    background-color: #211A17;
+    min-height: 10rem;
+
+}
+.repo h1{
+    font-size: 1.3rem;
+}

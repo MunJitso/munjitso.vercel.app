@@ -1,0 +1,13 @@
+<div class="r-container mx-auto">
+    <div class="grid lg:grid-cols-4 md:grid-cols-2 sm:grid-cols-1 gap-4">
+    <div class="p-5 drop-shadow-lg repo grid content-between rounded-md" *ngFor="let repo of reposList">
+        <h1 >{{ repo.name }}</h1>
+        <p class="my-3">{{repo.description}}</p>
+        <div class="flex content-between items-center justify-between">
+            <a href="{{repo.html_url}}" target="_blank" class="button rounded-md">Source Code</a>
+            <div> 
+                <p><fa-icon [icon]="languageIcons[repo.language]" class="ml-2 text-xl"></fa-icon>  {{repo.language}}</p>
+            </div>
+        </div>
+    </div>
+</div>
