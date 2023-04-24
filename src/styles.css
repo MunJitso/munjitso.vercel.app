@@ -75,11 +75,13 @@ nav div{
 .links a:hover{
     background-color: #ffffff37;
 }
+.info-card li{
+    margin-top: 1rem;
+}
 .social-icon{
     border-radius: 7px;
     font-size: 1.4rem;
     padding: 0.5rem 1rem;
-    background-color: rgb(88, 131, 88);
     text-align: center;
 }
 @media (max-width:991px) {
@@ -89,6 +91,9 @@ nav div{
     .phone-nav{
         display: flex; 
         justify-content: center;
+    }
+    .links a{
+        padding: 0.5rem 1rem;
     }
     nav div{
         justify-content: center;
