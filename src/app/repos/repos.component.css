@@ -10,3 +10,14 @@
 .repo h1{
     font-size: 1.3rem;
 }
+input{
+    background-color: #211A17;
+    color: #ffffff;
+    padding: 1rem 2rem;
+    margin: 2rem;
+    border-radius: 5px;
+}
+input:focus{
+    border: 0;
+    outline: none;
+}
