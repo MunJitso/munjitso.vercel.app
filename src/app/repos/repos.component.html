@@ -1,6 +1,9 @@
 <div class="r-container mx-auto">
+    <label style="text-align: center;justify-content: center;display: flex;align-items: center;">
+        <input [(ngModel)]="searchQuery" (ngModelChange)="onSearch()" placeholder="Search...">
+    </label>
     <div class="grid lg:grid-cols-4 md:grid-cols-2 sm:grid-cols-1 gap-4">
-    <div class="p-5 drop-shadow-lg repo grid content-between rounded-md" *ngFor="let repo of reposList">
+    <div class="p-5 drop-shadow-lg repo grid content-between rounded-md" *ngFor="let repo of reposUpdated">
         <h1 >{{ repo.name }}</h1>
         <p class="my-3">{{repo.description}}</p>
         <div class="flex content-between items-center justify-between">
