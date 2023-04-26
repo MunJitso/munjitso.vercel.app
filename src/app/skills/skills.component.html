@@ -1,43 +1,22 @@
 <div class="dom-container p-7"><div>
-    <div class="m-container py-7 rounded-md">
+    <div class="m-container py-7 rounded-md" [ngClass]="toggle.getToggledState() ? 'sakura-theme' : 'nature-theme'">
         <h1 class="font-semibold mb-3">My Skills</h1>
-        <p class="text-lg">I possess extensive and diverse knowledge across various domains of Computer Science and Information Technology. I am passionate about enhancing my theoretical understanding and practical experience in this field continually. One of my greatest strengths is creative problem-solving, and I find myself drawn to new challenges that require me to think out-of-the-box. Additionally, I have honed my proficiency in several programming languages, which include:
+        <p class="text-lg">I possess extensive and diverse knowledge across various domains of Computer Science and Information Technology.
+             I am passionate about enhancing my theoretical understanding and practical experience in this field continually.
+              One of my greatest strengths is creative problem-solving,
+               and I find myself drawn to new challenges that require me to think out-of-the-box. Additionally,
+                I have honed my proficiency in several programming languages, which include:
         </p>
     </div>
-        <div class="m-container py-7 rounded-md">
-            <div class="grid grid-cols-10 gap-2 md:gap-0 mb-6">
-                <div class="cols-start-1 col-span-1 flex items-center text-gray-200" ><fa-icon [icon]="faComputer"></fa-icon></div>
+        <div class="m-container py-7 rounded-md" [ngClass]="toggle.getToggledState() ? 'sakura-theme' : 'nature-theme'">
+            <div *ngFor="let skills of skillsCard; let i = index;" [ngClass]="i === skillsCard.length - 1 ? 'grid grid-cols-10 gap-2 md:gap-0' : 'grid grid-cols-10 gap-2 md:gap-0 mb-6'">
+                <div class="cols-start-1 col-span-1 flex items-center" [ngClass]="toggle.getToggledState() ? 'sakura-icons' : 'nature-icons'">
+                    <fa-icon [icon]="skills.icon"></fa-icon>
+                </div>
                 <div class="col-span-9 flex items-center ml-5 md:ml-0">
                     <div>
-                    <h2 class="title-skills">OPERATING SYSTEMS</h2>
-                    <p class="content-skills text-gray-400 font-bold">Windows - Linux</p>
-                </div>
-                </div>
-            </div>
-            <div class="grid grid-cols-10 gap-2 md:gap-0 mb-6">
-                <div class="cols-start-1 col-span-1 flex items-center text-gray-200" ><fa-icon [icon]="faBrush"></fa-icon></div>
-                <div class="col-span-9 flex items-center ml-5 md:ml-0">
-                    <div>
-                    <h2 class="title-skills">FRONT-END</h2>
-                    <p class="content-skills text-gray-400 font-bold">HTML - CSS - JavaScript - Angular - Tailwind CSS</p>
-                </div>
-                </div>
-            </div>
-            <div class="grid grid-cols-10 gap-2 md:gap-0 mb-6">
-                <div class="cols-start-1 col-span-1 flex items-center text-gray-200" ><fa-icon [icon]="faGear"></fa-icon></div>
-                <div class="col-span-9 flex items-center ml-5 md:ml-0">
-                    <div>
-                    <h2 class="title-skills">BACK-END</h2>
-                    <p class="content-skills text-gray-400 font-bold">Spring Boot</p>
-                </div>
-                </div>
-            </div>
-            <div class="grid grid-cols-10 gap-2 md:gap-0">
-                <div class="cols-start-1 col-span-1 flex items-center text-gray-200" ><fa-icon [icon]="faCode"></fa-icon></div>
-                <div class="col-span-9 flex items-center ml-5 md:ml-0">
-                    <div>
-                    <h2 class="title-skills">PROGRAMMING LANGUAGES</h2>
-                    <p class="content-skills text-gray-400 font-bold">ٌPython - Rust - Java - TypeScript - Bash</p>
+                    <h2 class="title-skills">{{skills.title}}</h2>
+                    <p class="content-skills text-gray-400 font-bold">{{skills.element}}</p>
                 </div>
                 </div>
             </div>

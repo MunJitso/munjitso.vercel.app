@@ -10,6 +10,7 @@ import {
   IconDefinition,
 } from "@fortawesome/free-brands-svg-icons";
 import { Router } from "@angular/router";
+import { ToggleserviceService } from "../toggleservice.service";
 
 interface LanguageIcons {
   [key: string]: IconDefinition;
@@ -36,9 +37,10 @@ export class ReposComponent {
     JavaScript: faJs,
     TypeScript: faJs,
   };
-
-  constructor(private apiService: ApiService, public router: Router) {}
-
+  toggle : ToggleserviceService
+  constructor(private apiService: ApiService, public router: Router, private toggleService: ToggleserviceService) {
+  this.toggle = toggleService;
+  }
   searchQuery: string = "";
   reposList: Repo[] = [];
   reposUpdated: Repo[] = [];

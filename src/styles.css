@@ -11,14 +11,19 @@
 }
 
 body {
+    transition: .08s;
     color: white;
-    background-image: url("assets/wallpaper.jpg");
     background-repeat: no-repeat;
     background-position: center;
     background-size: cover;
     background-attachment: fixed;
 }
-
+.nature-background{
+    background-image: url("assets/wallpaper.jpg");
+}
+.sakura-background{
+    background-image: url("assets/sakura-blossom.jpg");
+}
 h1 {
     font-family: 'Space Grotesk', sans-serif;
     font-size: 1.7rem;
@@ -32,15 +37,20 @@ nav {
     z-index: 1000;
     width: calc((100% - 0px) - 0px);
     position: fixed;
-    background-color: #262626;
     filter: drop-shadow(0px 5px 17px #00000053);
 }
 
 nav div {
     justify-content: space-between;
-    padding: 0.6rem 3rem;
+    padding: 0.4rem 3rem;
 }
-
+.nav-sakura{
+    background-color: white;
+    color: #000;
+}
+.nav-nature{
+    background-color: #262626;
+}
 fa-icon {
     font-size: 1.5rem;
 }
@@ -52,7 +62,7 @@ fa-icon {
 }
 
 .phone-nav {
-    filter: drop-shadow(0px -5px 17px #000);
+    filter: drop-shadow(0px 5px 17px #00000053);
     display: none;
     left: 0;
     bottom: 0;
@@ -63,7 +73,6 @@ fa-icon {
     margin: 1rem 0;
     min-width: 50%;
     max-width: 35rem;
-    background-color: #211A17;
 }
 
 .pfp {
@@ -76,7 +85,12 @@ fa-icon {
     background-color: rgb(88, 131, 88);
     transition: 0.06s;
 }
-
+.sakura-theme .button{
+    color: white;
+}
+.sakura-theme .social-icon{
+    color: white;
+}
 .button:hover {
     background-color: rgb(58, 86, 58);
 }
@@ -114,7 +128,46 @@ fa-icon {
     padding: 0.5rem 1rem;
     text-align: center;
 }
-
+.r-container{
+    padding:2rem 0;
+    width: 90%;
+}
+.repo{
+    min-height: 10rem;
+}
+.repo h1{
+    font-size: 1.3rem;
+}
+input{
+    color: #ffffff;
+    padding: 1rem 2rem;
+    margin: 2rem;
+    border-radius: 5px;
+    background-color: #211A17;
+}
+input:focus{
+    border: 0;
+    outline: none;
+}
+.nature-theme {
+    transition: .08s;
+    color: white;
+    background-color: #211A17;
+}
+.sakura-theme{
+    box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+    transition: .08s;
+    color: #000;
+    background-color: whitesmoke;
+}
+.sakura-icons{
+    transition: .08s;
+    color: #000;
+}
+.nature-icons{
+    transition: .08s;
+    color: #f6f6f6;
+}
 @media (max-width:991px) {
     .toggle {
         display: none;
@@ -128,6 +181,7 @@ fa-icon {
         padding: 0.5rem 1rem;
     }
     nav div {
+        padding: 0.4rem 1rem;
         justify-content: center;
     }
 }

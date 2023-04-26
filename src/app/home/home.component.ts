@@ -1,11 +1,17 @@
 import { Component } from '@angular/core';
 import { faDiscord, faFacebook, faTwitter, faTelegram, faInstagram, faYoutube } from '@fortawesome/free-brands-svg-icons';
 import { faBriefcase,faCakeCandles, faUser, faLanguage } from '@fortawesome/free-solid-svg-icons';
+import { ToggleserviceService } from '../toggleservice.service';
 @Component({
   selector: 'app-home',
   templateUrl: './home.component.html'
 })
 export class HomeComponent {
+  toggle : ToggleserviceService
+  constructor(private toggleService: ToggleserviceService){
+    this.toggle = toggleService
+  }
+  
   discord = faDiscord
   facebook = faFacebook
   instagram = faInstagram

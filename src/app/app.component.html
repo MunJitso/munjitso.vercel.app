@@ -1,15 +1,20 @@
-<nav>
-    <div class="flex items-center">
+<nav id="nav">
+    <div class="flex justify-between items-center">
     <a href="/"><h1>MunJitso</h1></a>
-    <div class="links toggle">
-        <a routerLink="/">HOME</a>
-        <a routerLink="/repos">REPOSITORIES</a>
-        <a routerLink="/skills">SKILLS</a>
-        <a href="https://www.munjitso.tech/" target="_blank">BLOG</a>
+    <div class="flex justify-items-end md:justify-center md:align-center">
+        <div class="links toggle">
+            <a routerLink="/">HOME</a>
+            <a routerLink="/repos">REPOSITORIES</a>
+            <a routerLink="/skills">SKILLS</a>
+            <a href="https://www.munjitso.tech/" target="_blank">BLOG</a>
+        </div>
+        <button (click)="changeBodyTheme()"><fa-icon [icon]="theme"></fa-icon></button>
     </div>
+    
 </div>
+
 </nav>
-<nav class="phone-nav">
+<nav class="phone-nav" id="nav-phone">
     <div class="links">
         <a routerLink="/">HOME</a>
         <a routerLink="/repos">REPOSITORIES</a>
