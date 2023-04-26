@@ -67,7 +67,9 @@ fa-icon {
     left: 0;
     bottom: 0;
 }
-
+.nav-sakura a:hover{
+    background-color: #00000017;
+}
 .m-container {
     padding: 2rem 2rem;
     margin: 1rem 0;
@@ -114,7 +116,7 @@ fa-icon {
     font-family: 'Rubik', sans-serif;
 }
 
-.links a:hover {
+.nav-nature a:hover {
     background-color: #ffffff37;
 }
 
@@ -168,6 +170,7 @@ input:focus{
     transition: .08s;
     color: #f6f6f6;
 }
+
 @media (max-width:991px) {
     .toggle {
         display: none;
