@@ -124,6 +124,7 @@ fa-icon {
         justify-content: center;
     }
     .links a {
+        margin-left: 0;
         padding: 0.5rem 1rem;
     }
     nav div {
