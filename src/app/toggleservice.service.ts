@@ -5,7 +5,7 @@ import { Injectable } from '@angular/core';
 })
 export class ToggleserviceService {
   constructor() { }
-  private isToggled = false;
+  private isToggled = true;
 
   getToggledState(){
     return this.isToggled;
