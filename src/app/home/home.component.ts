@@ -1,5 +1,6 @@
 import { Component } from '@angular/core';
 import { faDiscord, faFacebook, faTwitter, faTelegram, faInstagram, faYoutube } from '@fortawesome/free-brands-svg-icons';
+import { faBriefcase,faCakeCandles, faUser, faLanguage } from '@fortawesome/free-solid-svg-icons';
 @Component({
   selector: 'app-home',
   templateUrl: './home.component.html'
@@ -11,6 +12,10 @@ export class HomeComponent {
   telegram = faTelegram
   twitter = faTwitter
   youtube = faYoutube
+  birthday = faCakeCandles
+  name = faUser
+  occupation = faBriefcase
+  languages = faLanguage
   ngOnInit(): void {
     this.runScript();
   }

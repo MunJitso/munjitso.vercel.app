@@ -41,6 +41,16 @@ nav div {
     padding: 0.6rem 3rem;
 }
 
+fa-icon {
+    font-size: 1.5rem;
+}
+
+.title-skills {
+    font-family: 'Rubik', sans-serif;
+    font-weight: 500;
+    font-size: 1.1rem;
+}
+
 .phone-nav {
     filter: drop-shadow(0px -5px 17px #000);
     display: none;
