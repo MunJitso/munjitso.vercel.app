@@ -16,6 +16,26 @@ export class HomeComponent {
   name = faUser
   occupation = faBriefcase
   languages = faLanguage
+
+  infoCard = [
+    {
+      title : "Mohamed Amine Belkacem",
+      icon : this.name
+    },
+    {
+      title : "21 November 2005",
+      icon : this.birthday
+    },
+    {
+      title : "Student",
+      icon : this.occupation
+    },
+    {
+      title : "Arabic - English - French",
+      icon : this.languages
+    }
+  ]
+
   ngOnInit(): void {
     this.runScript();
   }

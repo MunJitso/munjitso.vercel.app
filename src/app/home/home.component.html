@@ -9,36 +9,12 @@
         </div>
         <div class="m-container py-7 rounded-md">
             <h1 class="font-semibold mb-3">Info Card</h1>
-            <div class="grid grid-cols-10 gap-2 md:gap-0 mb-6">
+            <div *ngFor="let info of infoCard; let i = index; " [ngClass]="i === infoCard.length - 1 ? 'grid grid-cols-10 gap-2 md:gap-0' : 'grid grid-cols-10 gap-2 md:gap-0 mb-6'">
                 <div class="cols-start-1 col-span-1 flex items-center text-gray-200">
-                    <fa-icon [icon]="name"></fa-icon>
+                    <fa-icon [icon]="info.icon"></fa-icon>
                 </div>
                 <div class="col-span-9 flex items-center ml-5 md:ml-0">
-                    <h2 class="title-skills">Mohamed Amine Belkacem</h2>
-                </div>
-            </div>
-            <div class="grid grid-cols-10 gap-2 md:gap-0 mb-6">
-                <div class="cols-start-1 col-span-1 flex items-center text-gray-200">
-                    <fa-icon [icon]="birthday"></fa-icon>
-                </div>
-                <div class="col-span-9 flex items-center ml-5 md:ml-0">
-                    <h2 class="title-skills">21 November 2005</h2>
-                </div>
-            </div>
-            <div class="grid grid-cols-10 gap-2 md:gap-0 mb-6">
-                <div class="cols-start-1 col-span-1 flex items-center text-gray-200">
-                    <fa-icon [icon]="occupation"></fa-icon>
-                </div>
-                <div class="col-span-9 flex items-center ml-5 md:ml-0">
-                    <h2 class="title-skills">Student</h2>
-                </div>
-            </div>
-            <div class="grid grid-cols-10 gap-2 md:gap-0">
-                <div class="cols-start-1 col-span-1 flex items-center text-gray-200">
-                    <fa-icon [icon]="languages"></fa-icon>
-                </div>
-                <div class="col-span-9 flex items-center ml-5 md:ml-0">
-                    <h2 class="title-skills">Arabic - English - French</h2>
+                    <h2 class="title-skills">{{info.title}}</h2>
                 </div>
             </div>
         </div>
