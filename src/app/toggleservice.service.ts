@@ -6,7 +6,7 @@ import { Injectable } from '@angular/core';
 export class ToggleserviceService {
   constructor() {
     if(localStorage.getItem('isToggled') === null){
-      localStorage.setItem('isToggled', JSON.stringify(true))
+      localStorage.setItem('isToggled', JSON.stringify(false))
     }
   }
 
