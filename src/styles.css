@@ -14,7 +14,7 @@
 }
 
 /* Settings in Commom */
-body, .button, .links a, .nature-theme, .sakura-theme, .sakura-icons, .nature-icons{
+body, .links a, .nature-theme, .sakura-theme, .sakura-icons, .nature-icons{
     transition: 0.06s;
 }
 .sakura-theme .button, .sakura-theme .social-icon{
@@ -83,7 +83,13 @@ input:focus{
 .nature-icons{
     color: #f6f6f6;
 }
-
+.sakura-theme .button{
+    transition: .08s;
+    background-color: rgb(120, 134, 183);
+}
+.sakura-theme .button:hover{
+    background-color: rgb(93, 104, 142);
+}
 /* Navbar */
 nav {
     z-index: 1000;
@@ -151,6 +157,7 @@ nav div {
 
 /* Buttons */
 .button {
+    transition: .08s;
     padding: 0.5rem 1rem;
     background-color: rgb(88, 131, 88);
 }
