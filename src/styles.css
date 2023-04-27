@@ -84,7 +84,7 @@ input:focus{
     color: #f6f6f6;
 }
 .sakura-theme .button{
-    transition: .08s;
+    transition: 0.1s;
     background-color: rgb(120, 134, 183);
 }
 .sakura-theme .button:hover{
@@ -157,7 +157,7 @@ nav div {
 
 /* Buttons */
 .button {
-    transition: .08s;
+    transition: 0.1s;
     padding: 0.5rem 1rem;
     background-color: rgb(88, 131, 88);
 }
