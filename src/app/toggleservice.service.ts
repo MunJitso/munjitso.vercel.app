@@ -14,7 +14,6 @@ export class ToggleserviceService {
     return JSON.parse(localStorage.getItem('isToggled') || 'true');
   }
   toggle() {
-    console.log(this.getToggledState())
     const isToggled = !this.getToggledState();
     localStorage.setItem('isToggled', JSON.stringify(isToggled))
   }
