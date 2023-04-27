@@ -11,6 +11,7 @@ export class AppComponent {
   title = 'portfolio'
   theme:IconDefinition = faLightbulb;
   ngOnInit():void{
+    this.toggleService.toggle()
     this.changeBodyTheme()
   }
   toggleNav(target:string, replace:string, element:HTMLElement){

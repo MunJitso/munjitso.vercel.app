@@ -1,18 +1,21 @@
 import { Injectable } from '@angular/core';
 
 @Injectable({
-  providedIn: 'root'
+  providedIn: 'root',
 })
 export class ToggleserviceService {
-  constructor() { }
-  private isToggled = true;
-
-  getToggledState(){
-    return this.isToggled;
-  }
-  toggle(){
-    this.isToggled = !this.isToggled
-    console.log(this.isToggled)
+  constructor() {
+    if(localStorage.getItem('isToggled') === null){
+      localStorage.setItem('isToggled', JSON.stringify(true))
+    }
   }
 
+  getToggledState() {
+    return JSON.parse(localStorage.getItem('isToggled') || 'true');
+  }
+  toggle() {
+    console.log(this.getToggledState())
+    const isToggled = !this.getToggledState();
+    localStorage.setItem('isToggled', JSON.stringify(isToggled))
+  }
 }
