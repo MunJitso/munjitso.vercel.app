@@ -14,7 +14,7 @@
 }
 
 /* Settings in Commom */
-body, .links a, .nature-theme, .sakura-theme, .sakura-icons, .nature-icons{
+.body, .links a, .nature-theme, .sakura-theme, .sakura-icons, .nature-icons{
     transition: 0.06s;
 }
 .sakura-theme .button, .sakura-theme .social-icon{
@@ -25,13 +25,6 @@ body, .links a, .nature-theme, .sakura-theme, .sakura-icons, .nature-icons{
 }
 
 /* HTML Elements */
-body {
-    color: white;
-    background-repeat: no-repeat;
-    background-position: center;
-    background-size: cover;
-    background-attachment: fixed;
-}
 h1 {
     font-family: 'Space Grotesk', sans-serif;
     font-size: 1.7rem;
@@ -52,6 +45,14 @@ input:focus{
 }
 
 /* themes */
+.body {
+    min-height: 100vh;
+    color: white;
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+    background-attachment: fixed;
+}
 .nature-background{
     background-color: #A2BEC0;
     background-image: url("assets/wallpaper.jpg");

@@ -1,4 +1,5 @@
-<nav id="nav">
+<div class="body" [ngClass]="toggleVar.getToggledState() ? 'sakura-background' : 'nature-background'">
+<nav [ngClass]="toggleVar.getToggledState() ? 'nav-sakura' : 'nav-nature'">
     <div class="flex justify-between items-center">
     <h1>MunJitso</h1>
     <div class="flex justify-items-end md:justify-center md:align-center">
@@ -8,13 +9,12 @@
             <a routerLink="/skills">SKILLS</a>
             <a href="https://www.munjitso.tech/" target="_blank">BLOG</a>
         </div>
-        <button (click)="changeBodyTheme()"><fa-icon [icon]="theme"></fa-icon></button>
+        <button (click)="changeBodyTheme()"><fa-icon [icon]="toggleVar.getToggledState() ? dark : light"></fa-icon></button>
     </div>
     
 </div>
-
 </nav>
-<nav class="phone-nav" id="nav-phone">
+<nav class="phone-nav"[ngClass]="toggleVar.getToggledState() ? 'nav-nature' : 'nav-sakura'">
     <div class="links">
         <a routerLink="/">HOME</a>
         <a routerLink="/repos">REPOSITORIES</a>
@@ -25,3 +25,4 @@
 <div class="nav-place"></div>
 <router-outlet></router-outlet>
 <div class="nav-place phone-nav"></div>
+</div>
