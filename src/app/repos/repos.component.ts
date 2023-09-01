@@ -7,6 +7,7 @@ import {
   faHtml5,
   faCss3,
   faRust,
+  faCode,
   IconDefinition,
 } from "@fortawesome/free-brands-svg-icons";
 import { Router } from "@angular/router";
@@ -36,6 +37,8 @@ export class ReposComponent {
     Rust: faRust,
     JavaScript: faJs,
     TypeScript: faJs,
+    C: faCode,
+    C++: faCode
   };
   toggle : ToggleserviceService
   constructor(private apiService: ApiService, public router: Router, private toggleService: ToggleserviceService) {
