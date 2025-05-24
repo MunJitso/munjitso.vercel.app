@@ -45,7 +45,7 @@ export class HomeComponent {
   ngOnInit(): void {
     this.runScript();
   }
-  possessions = ["a novice full-stack dev", "Moroccan", "an engineering student at ENSA-K","an enthusiast", "a computer nerd"];
+  possessions = ["a novice full-stack dev", "Moroccan", "an eng. student at ENSA-K","an enthusiast", "a computer nerd"];
   possession = this.possessions[0]
   async runScript(){
     let i = 0;
